@@ -8,7 +8,8 @@ const archiver = require('archiver');
 const Database = require('./db');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+// API runs on a fixed internal port (3001), Next.js uses Railway's PORT
+const PORT = process.env.API_PORT || 3001;
 const API_URL = process.env.API_URL || `http://localhost:${PORT}`;
 
 // Middleware
